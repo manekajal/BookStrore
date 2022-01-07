@@ -6,26 +6,22 @@ import {
   Route, Redirect
 }from "react-router-dom";
 
-import Home from './component/AddressHome';
-import AddAddress from './component/AddAddress';
+import Homepage from './component/Design/Homepage';
+import Home from './component/Design/Home';
 
 function App() {
   return (
     <div className="App">
+       
           <Router>
             <Switch>
-              <Route exact path="/home">
-                <Home />
-              </Route>
-              <Route exact path="/addform">
-                <AddAddress />
-              </Route>
-              <Route exact path="/addform/:id">
-                <AddAddress />
-              </Route>
-              <Route exact path="">
-                <Redirect exact from="/" to="/home" />
-              </Route>
+           
+            <Route exact path="/" component={Homepage} />
+
+            <Route exact path="/home" component={Home} />
+            
+              hii
+             
             </Switch>
           </Router>
     </div>
